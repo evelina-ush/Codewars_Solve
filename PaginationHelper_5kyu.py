@@ -31,7 +31,7 @@ class PaginationHelper:
             return remaining_items
 
         return self.items_per_page
-#always check this one
+#always check this one(had some problems with it)
     def page_index(self, item_index):
         if ((item_index / self.items_per_page) < 1) and (item_index >= 0) and (len(self.collection) > 0) and (
                 item_index < len(self.collection)):
