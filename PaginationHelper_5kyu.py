@@ -31,14 +31,14 @@ class PaginationHelper:
             return remaining_items
 
         return self.items_per_page
-
+#always check this one
     def page_index(self, item_index):
         if ((item_index / self.items_per_page) < 1) and (item_index >= 0) and (len(self.collection) > 0) and (
                 item_index < len(self.collection)):
             return 0
         elif ((item_index / self.items_per_page) >= 1) and (
                 (item_index / self.items_per_page) < self.page_count()) and (item_index > 0) and (
-        (len(self.collection) > 0)) and (item_index < len(self.collection)):
-            return (item_index // self.items_per_page)
+                (len(self.collection) > 0)) and (item_index < len(self.collection)):
+            return item_index // self.items_per_page
         else:
             return -1
